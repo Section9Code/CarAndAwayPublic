@@ -57,7 +57,7 @@ Here I am using a [chrome application called Postman](https://chrome.google.com/
 
 ![Using postman to upload the data file](PostmanExample.jpg)
 
-- In thee query parameters you can see I have passed in the secret token as the "code" query string parameter
+- In the query parameters you can see I have passed in the secret token as the "code" query string parameter
 - I am setting a single form field called "file" to be the file I want to upload
 - I got a 200 (OK) response from the server to tell me the file processed successfully
 
