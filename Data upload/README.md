@@ -51,3 +51,17 @@ The end point for this service is **/api/DataFeed**. There is also a[ swagger de
 You are free to call the development environment as much as you need.
 
 The development environment URL is: <http://carandaway.westeurope.cloudapp.azure.com:600> and the DataFeed API is available here: <http://carandaway.westeurope.cloudapp.azure.com:600/api/DataFeed>
+
+### Example
+Here I am using a chrome application called Postman to upload the example CSV file into the system.
+
+![Using postman to upload the data file](PostmanExample.jpg)
+
+- In thee query parameters you can see I have passed in the secret token as the "code" query string parameter
+- I am setting a single form field called "file" to be the file I want to upload
+- I got a 200 (OK) response from the server to tell me the file processed successfully
+
+## Troubleshooting
+This is a very simple API call, the only real problem you can get is if the file isn't in the right format or your security token isn't valid.
+
+But if there are problems please raise them as issues here in GitHub and we will deal with them.
