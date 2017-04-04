@@ -1,0 +1,57 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Car & Away - Data Feed"
+    },
+    "paths": {
+        "/api/datafeed": {
+            "get": {
+                "description": "Gets the version number of the current API\n",
+                "parameters": [
+                    {
+                        "name": "code",
+                        "in": "query",
+                        "description": "Your secret access token",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Version number",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorised request"
+                    }
+                }
+            },
+            "post": {
+                "description": "Post CSV data file to the system",
+                "parameters": [
+                    {
+                        "name": "code",
+                        "in": "query",
+                        "description": "Your secret access token",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "File processed successfully"
+                    },
+                    "401": {
+                        "description": "Unauthorised request - not processed"
+                    },
+                    "500": {
+                        "description": "Error occured while processing file"
+                    }
+                }
+            }
+        }
+    }
+}

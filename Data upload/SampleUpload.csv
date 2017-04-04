@@ -1,0 +1,2 @@
+Booking_Ref,Booking_Status,Car_Park_Code,Product_Name,Car Care Extra,Booking_Start_Date,Booking_End_Date,Reg_No,Veh_Mfr,Veh_Model,Veh_Colour,Flight_No_Out,Booking_Start_Time,Booking_End_Time,Lead_Name,Customer_Mobile,Customer_Email,Flight_No_In,Source_Reference,Sms_Confirmation
+xxx111,C,Single record test,Prod,,18/04/2017,26/04/2017,XX11YYY,Ford,Escort,Green,XY123,05:30,23:00,Mr Test 333,07555111222,test@email.com,,,
