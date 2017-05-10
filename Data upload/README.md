@@ -31,7 +31,7 @@ The first line must be the field titles, after that each line of the file repres
 You can [download the sample CSV file](SampleUpload.csv) to see what a valid upload file should look like.
 
 ## End Point
-The end point for this service is **/api/DataFeed**. There is also a[ swagger definition file](swagger.json) if needed.
+The end point for this service is **http://devapi.carandaway.life/api/DataFeed**. There is also a [swagger definition file](swagger.json) if needed.
 
 ### Method
 - POST
