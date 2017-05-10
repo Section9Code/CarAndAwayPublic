@@ -31,7 +31,7 @@ The first line must be the field titles, after that each line of the file repres
 You can [download the sample CSV file](SampleUpload.csv) to see what a valid upload file should look like.
 
 ## End Point
-The end point for this service is **http://devapi.carandaway.life/api/DataFeed**. There is also a [swagger definition file](swagger.json) if needed.
+The end point for this service is **/api/DataFeed**. There is also a [swagger definition file](swagger.json) if needed.
 
 ### Method
 - POST
@@ -50,7 +50,7 @@ The end point for this service is **http://devapi.carandaway.life/api/DataFeed**
 ## Development
 You are free to call the development environment as much as you need.
 
-The development environment URL is: <http://carandaway.westeurope.cloudapp.azure.com:600> and the DataFeed API is available here: <http://carandaway.westeurope.cloudapp.azure.com:600/api/DataFeed>
+The development environment URL is: <http://devapi.carandaway.life> and the DataFeed API is available here: <http://devapi.carandaway.life/api/DataFeed>
 
 ### Example
 Here I am using a [chrome application called Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en) to upload the example CSV file into the system.
