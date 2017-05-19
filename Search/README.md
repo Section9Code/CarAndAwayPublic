@@ -2,7 +2,7 @@
 This document will show you how to search against Car & Away availability and get results.
 
 ## Definition
-The search API conforms to this [swagger API definition](PeerToPeerSearchApiSwagger).
+The search API conforms to this [swagger API definition](PeerToPeerSearchApiSwagger.md).
 
 ## Security
 > **Please note:** A JWT approach is being developed at the moment. In the mean team please use the token in the query string to get results. This page will be updated when the JWT approach is available.
