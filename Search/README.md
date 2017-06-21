@@ -2,12 +2,17 @@
 This document will show you how to search against Car & Away availability and get results.
 
 ## Definition
-The search API conforms to this [swagger API definition](PeerToPeerSearchApiSwagger.json).
+The search API conforms to this [swagger API definition](SearchApiSwagger.yaml).
 
 ## Security
-> **Please note:** A JWT approach is being developed at the moment. In the mean team please use the token in the query string to get results. This page will be updated when the JWT approach is available.
+The API uses [JWT (JSON Web Tokens)](https://jwt.io/) as its way of identifying users of the API. You will be issued with a username and password so you can use the API.
 
-You will be issued with a secure token that you will pass with every request.
+### Get a token
+In order to use the API you will need to login with your username and password to receive a new token.
+
+/api/Login?code={CODE}&username={USERNAME}&password={PASSWORD}
+
+If your username and password are correct you will receive a 200 OK response with a message payload that contains your token. Any incorrect attempts will return a 400 Bad Request response. There will be no indication of what went wrong, a user with an incorrect password gets the same message as a user who doesn't exist.
 
 ## Searching
 To search make a GET request to the URL and pass the following query parameters:
@@ -30,9 +35,16 @@ To search make a GET request to the URL and pass the following query parameters:
 
 Not all of these fields are required and you can search in many different combinations
 
+### Security
+As previously stated the API uses JWT as its form of protection. You will need to provide your valid JWT as part of the requests header to be able to use the service. As per the specification for JWT provide your token in the Authorization header of your request.
+
+If the token isn't presented a 403 Bad Request response will be returned. The message will contain a JSON object with a code of 1051 and a message of "No authentication token".
+
+If a token is presented but it isn't valid then a 403 Bad Request response will be returned. The message will contain a JSON object with a code of 1052 and a message of "Invalid authentication token".
+
 ### Example searches
 #### Search between 20/5/17 11:30 - 23/5/17 12:00 at LGW
-/api/RentalCarsSearch?code={TOKEN}=&pickUpDate=2017-05-20 11:30:00&dropOffDate=2017-05-23 12:00:00&pickUpLocationId=LGW
+/api/RentalCarsSearch?code={CODE}=&pickUpDate=2017-05-20 11:30:00&dropOffDate=2017-05-23 12:00:00&pickUpLocationId=LGW
 
 This will return a 200 OK with the message payload as a JSON object.
 
