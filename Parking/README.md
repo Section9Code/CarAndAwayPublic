@@ -1,4 +1,4 @@
-# Empark Parking File
+# Parking File
 When bookings are created or canceld a parking file will be created and sent to the right API. This will contain details of the booking that need to be handled.
 
 ## Scenarios
